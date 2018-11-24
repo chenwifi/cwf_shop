@@ -1,0 +1,54 @@
+<?php
+
+
+/*
+
+file init.php
+作用：框架初始化
+
+
+*/
+
+
+define('Root',str_replace('\\','/',dirname(dirname(__FILE__))).'/');
+define('Debug',true);
+
+require(Root . 'includes/db.class.php');
+require(Root . 'includes/conf.class.php');
+require(Root . 'includes/log.class.php');
+
+
+
+
+//过滤参数，用递归方法实现$_GET,$_POST,$COOKIE 
+
+
+
+//设置报错级别：
+
+if(defined('Debug')){
+    Error_reporting(E_ALL);
+}else{
+    Error_reporting(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
